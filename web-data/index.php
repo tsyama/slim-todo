@@ -1,1 +1,3 @@
-aaaa
+<?php
+
+require 'vendor/autoload.php';

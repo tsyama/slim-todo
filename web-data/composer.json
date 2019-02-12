@@ -1,0 +1,12 @@
+{
+    "name": "tsyama/slim-todo",
+    "authors": [
+        {
+            "name": "tsyama",
+            "email": "tsyama.desu@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0"
+    }
+}
