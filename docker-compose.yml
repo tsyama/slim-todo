@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  web:
+    build: ./web/
+    volumes:
+      - ./web-data/:/var/www/html/
+    ports:
+      - 8080:80
