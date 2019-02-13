@@ -4,9 +4,9 @@ return [
     'displayErrorDetails' => true,
     'addContentLengthHeader' => false,
     'db' => [
-        'host' => 'localhost',
-        'user' => 'user',
-        'password' => 'password',
-        'dbname' => 'exampleapp',
+        'host' => 'db',
+        'user' => 'root',
+        'password' => 'root',
+        'dbname' => 'slim_todo',
     ],
 ];
