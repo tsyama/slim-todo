@@ -1,0 +1,5 @@
+.idea/
+logs/
+web-data/vendor/
+web-data/cache/*
+!.gitkeep
