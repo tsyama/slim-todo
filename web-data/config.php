@@ -9,4 +9,8 @@ return [
         'password' => 'root',
         'dbname' => 'slim_todo',
     ],
+    'renderer' => [
+        'blade_template_path' => __DIR__ . '/views',
+        'blade_cache_path' => __DIR__ . '/cache',
+    ],
 ];
