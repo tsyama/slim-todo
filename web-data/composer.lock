@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46981295465997c817315b574708c875",
+    "content-hash": "58a7ccfd4ddd72397f69bf1809127e6c",
     "packages": [
         {
             "name": "cakephp/cache",
@@ -244,6 +244,50 @@
             "time": "2018-12-13T23:20:56+00:00"
         },
         {
+            "name": "cakephp/event",
+            "version": "3.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/event.git",
+                "reference": "267ac4768e42ea83c67f168e2e7b0cd6f3dd2dc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/event/zipball/267ac4768e42ea83c67f168e2e7b0cd6f3dd2dc8",
+                "reference": "267ac4768e42ea83c67f168e2e7b0cd6f3dd2dc8",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/core": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Event\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/event/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP event dispatcher library that helps implementing the observer pattern",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "dispatcher",
+                "event",
+                "observer pattern"
+            ],
+            "time": "2018-09-28T10:56:48+00:00"
+        },
+        {
             "name": "cakephp/log",
             "version": "3.7.4",
             "source": {
@@ -285,6 +329,59 @@
                 "cakephp",
                 "log",
                 "logging"
+            ],
+            "time": "2019-02-05T13:29:41+00:00"
+        },
+        {
+            "name": "cakephp/orm",
+            "version": "3.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/orm.git",
+                "reference": "9b299a364d1bdee97215c611b1c6775982ba9862"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/orm/zipball/9b299a364d1bdee97215c611b1c6775982ba9862",
+                "reference": "9b299a364d1bdee97215c611b1c6775982ba9862",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/collection": "^3.6.0",
+                "cakephp/core": "^3.6.0",
+                "cakephp/database": "^3.6.0",
+                "cakephp/datasource": "^3.6.0",
+                "cakephp/event": "^3.6.0",
+                "cakephp/utility": "^3.6.0",
+                "cakephp/validation": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "suggest": {
+                "cakephp/i18n": "If you are using Translate / Timestamp Behavior."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\ORM\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/orm/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP ORM - Provides a flexible and powerful ORM implementing a data-mapper pattern.",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "data-mapper",
+                "data-mapper pattern",
+                "orm"
             ],
             "time": "2019-02-05T13:29:41+00:00"
         },
@@ -340,6 +437,54 @@
                 "utility"
             ],
             "time": "2018-09-14T01:26:50+00:00"
+        },
+        {
+            "name": "cakephp/validation",
+            "version": "3.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/validation.git",
+                "reference": "438661d43540d284f7083a53ed98f7fe41f0c34d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/validation/zipball/438661d43540d284f7083a53ed98f7fe41f0c34d",
+                "reference": "438661d43540d284f7083a53ed98f7fe41f0c34d",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/core": "^3.6.0",
+                "cakephp/utility": "^3.6.0",
+                "php": ">=5.6.0",
+                "psr/http-message": "^1.0.0"
+            },
+            "suggest": {
+                "cakephp/i18n": "If you want to use Validation::localizedTime()"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Validation\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/validation/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Validation library",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "data validation",
+                "validation"
+            ],
+            "time": "2019-01-15T16:52:03+00:00"
         },
         {
             "name": "container-interop/container-interop",
