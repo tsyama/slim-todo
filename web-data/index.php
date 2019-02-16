@@ -1,8 +1,7 @@
 <?php
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-use \Slim\Views\Blade;
-use \Cake\ORM\Locator\TableLocator;
+use Slim\Views\Blade;
+use Cake\ORM\Locator\TableLocator;
+use App\Controllers\HelloController;
 
 require_once 'vendor/autoload.php';
 require_once 'database.php';
@@ -31,18 +30,6 @@ $container['locator'] = function ($c) {
     return $locator;
 };
 
-$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $this->logger->addInfo("Hello, {$name}");
-
-    $ticketTable = $this->locator->get('Tickets');
-    $ticket = $ticketTable->newEntity(['title' => $name]);
-    $ticketTable->save($ticket);
-
-    $data = [
-        'name' => $name,
-    ];
-    return $this->view->render($response, 'hello', $data);
-});
+$app->get('/hello/{name}', HelloController::class . ':index');
 
 $app->run();
