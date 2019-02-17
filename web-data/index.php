@@ -1,9 +1,10 @@
 <?php
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-use \Slim\Views\Blade;
+use Slim\Views\Blade;
+use Cake\ORM\Locator\TableLocator;
+use App\Controllers\HelloController;
 
 require_once 'vendor/autoload.php';
+require_once 'database.php';
 $config = require_once 'config.php';
 
 $app = new \Slim\App(['settings' => $config]);
@@ -17,20 +18,18 @@ $container['view'] = function ($c) {
     );
 };
 
-$container['logger'] = function($c) {
+$container['logger'] = function ($c) {
     $logger = new \Monolog\Logger('my_logger');
     $fileHandler = new \Monolog\Handler\StreamHandler('logs/app.log');
     $logger->pushHandler($fileHandler);
     return $logger;
 };
 
-$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $this->logger->addInfo("Hello, {$name}");
-    $data = [
-        'name' => $name,
-    ];
-    return $this->view->render($response, 'hello', $data);
-});
+$container['locator'] = function ($c) {
+    $locator = new TableLocator();
+    return $locator;
+};
+
+$app->get('/hello/{name}', HelloController::class . ':index');
 
 $app->run();
